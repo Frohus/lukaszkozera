@@ -1,0 +1,158 @@
+#bodymain {
+    overflow-x: hidden;
+    overflow-y: hidden;
+    margin: 0;
+}
+
+html, body {
+    height: 100%;
+    font-family: "Source Sans Pro", "Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,Verdana,sans-serif;
+    font-weight: normal;
+    -webkit-font-smoothing: antialiased;
+    font-size: 14px;
+    line-height: 1.4;
+    color: #000000CC;
+}
+
+a {
+    background: transparent 0 0 repeat-x linear-gradient(to bottom, rgba(0,0,0,0) 75%, rgba(0,0,0,0.8) 75%);
+    background-size: 0 0;
+    text-decoration: none;
+    color: inherit;
+}
+
+p {
+    margin: 0 0 12px;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    margin: 0 0 12px;
+}
+
+.page-title {
+    padding: 15px 10px 15px 23px;
+    border-left: 7px solid #eee;
+    margin: 40px -30px 30px -30px;
+    line-height: 1;
+}
+
+/*
+ *  TOP BAR STYLE
+ */
+
+.topbar {
+    font-family: "Source Sans Pro", "Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,Verdana,sans-serif;
+    padding: 0 0 30px;
+    font-size: 28px;
+    letter-spacing: -0.02rem;
+    line-height: 36px;
+    text-align: center;
+    font-weight: 300;
+}
+
+.topbar a {
+    background-image: none;
+    -webkit-transition: color 0.2s;
+}
+
+.topbar a:hover {
+    color: steelblue;
+}
+
+.topbar ul {
+    font-size: 15px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.topbar li {
+    display: inline;
+    padding: 0 9px;
+}
+
+.topavatar {
+    padding: 50px 0 0;
+    text-align: center;
+}
+
+.topavatar img {
+    width: 100px;
+    height: 100px;
+}
+
+/*
+ *  BOTTOM BAR STYLE
+ */
+
+.index-body {
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    height: 100%;
+    width: 100%;
+    background: url(background.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.shim {
+    content: " ";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+@media (max-aspect-ratio: 4/3) {
+    .index-body {
+        background-size: auto 100%;
+    }
+}
+
+.index-inner {
+    position: relative;
+    top: 50%;
+    padding: 17px 0;
+    color: #fff;
+    -webkit-transform: translateY(-50%);
+       -moz-transform: translateY(-50%);
+         -o-transform: translateY(-50%);
+            transform: translateY(-50%);
+}
+
+.topbar {
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+.topbar span {
+    font-weight: 700;
+    font-size: 36px;
+}
+
+.social {
+    text-align: center;
+    font-weight: 700;
+    color: #fff;
+    padding: 24px 0 0;
+}
+
+.social a {
+    font-size: 10px;
+    padding: 0 10px;
+    -webkit-transition: color 0.2s;
+}
+
+.topbar a:hover, .social a:hover {
+    color: #FFFFFFCC;
+}
+
+/* About Modal */
+
