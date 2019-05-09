@@ -19,31 +19,7 @@
             <p>Student • Programmer • Developer</p>
 
             <ul>
-                <li>
-                    <button id="myBtn">About me</button>
-                </li>
-                <!-- The Modal -->
-                <!-- Trigger/Open The Modal -->
-
-                <!-- The Modal -->
-                <div id="myModal" class="modal">
-
-                    <!-- Modal content -->
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <span class="close">&times;</span>
-                            <h2>Modal Header</h2>
-                        </div>
-                        <div class="modal-body">
-                            <p>Some text in the Modal Body</p>
-                            <p>Some other text...</p>
-                        </div>
-                        <div class="modal-footer">
-                            <h3>Modal Footer</h3>
-                        </div>
-                    </div>
-
-                </div>
+                <li><a>about me</a></li>
                 {# TODO: pop up with text about me#}
                 <li><a>projects</a></li>
                 {# TODO: lift all page once clicked showing available projects #}
@@ -55,40 +31,12 @@
             <a href="https://github.com/Frohus" target="_blank"><i class="fab fa-github fa-3x"></i></a>
             <a href="#" target="_blank"><i class="far fa-envelope fa-3x"></i></a>
             {# TODO: add popup to send an email directly from the website #}
-            <a href="https://www.linkedin.com/in/lukasz-kozera-3b2838159/" target="_blank"><i class="fab fa-linkedin fa-3x"></i></a>
+            <a href="https://www.linkedin.com/in/lukasz-kozera-3b2838159/" target="_blank">
+                <i class="fab fa-linkedin fa-3x"></i></a>
         </div>
 
     </div>
 </div>
 {# TODO: JS scripts #}
-<scripts>
-<script>
-// Get the modal
-var modal = document.getElementById('myModal');
-
-// Get the button that opens the modal
-var btn = document.getElementById("myBtn");
-
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
-
-// When the user clicks the button, open the modal
-btn.onclick = function() {
-  modal.style.display = "block";
-}
-
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-  modal.style.display = "none";
-}
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-}
-</script>
-</scripts>
 </body>
 </html>
