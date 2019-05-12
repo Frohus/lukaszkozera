@@ -6,10 +6,18 @@ from .validators import validate_file_extension
 class About(models.Model):
     about_me = models.TextField(default="to be updated")
 
+    class Meta:
+        verbose_name = "About Info"
+        verbose_name_plural = "About Info"
+
 
 class Cv(models.Model):
     # TODO: create path for cv file
     cv = models.FileField(upload_to="#", validators=[validate_file_extension])
+
+    class Meta:
+        verbose_name = "CV"
+        verbose_name_plural = "CV"
 
 
 class Contact(models.Model):
@@ -17,3 +25,7 @@ class Contact(models.Model):
     email = models.EmailField(blank=True)
     message = models.TextField()
     date_send = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        verbose_name = "Messages"
+        verbose_name_plural = "Messages"

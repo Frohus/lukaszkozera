@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="{% static 'home_page/home_static.css' %}">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
           integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
 </head>
 <body>
 
@@ -22,28 +23,26 @@
 
 
                 <!--Start of Modal -->
-                <div class="modal">
-                    <input id="modal__trigger" type="checkbox"/>
-                    <label for="modal__trigger">About Me</label>
-                    <div class="modal__overlay" role="dialog" aria-labelledby="modal__title"
-                         aria-describedby="modal_desc">
-                        <div class="modal__wrap">
-                            <label for="modal__trigger">&#10006;</label>
-                            <h2 id="modal__title">About me</h2>
-                            <p id="modal__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac laoreet
-                                elit. Phasellus dignissim purus vitae urna cursus, quis congue ligula tristique. Ut nec
-                                blandit risus.</p>
-                        </div>
-                    </div>
-                </div>
                 <!--End of Modal -->
 
 
-                <li><a>about me</a></li>
+                <li>
+                    <div id="ex1" class="modal">
+                        <p>Thanks for clicking. That felt good.</p>
+                        <p>asd jsn wwhdbnn aosdwwe</p>
+                    </div>
+                    <a href="#ex1" rel="modal:open">about me</a>
+                </li>
                 {# TODO: pop up with text about me#}
                 <li><a>projects</a></li>
                 {# TODO: lift all page once clicked showing available projects #}
-                <li><a>cv</a></li>
+                <li>
+                    <div id="ex1" class="modal">
+                        <p>Thanks for clicking. That felt good.</p>
+                        <p>asd jsn wwhdbnn aosdwwe</p>
+                    </div>
+                    <a href="#ex1" rel="modal:open">cv</a>
+                </li>
                 {# TODO: pop up pdf Cv, with option to download and/or print #}
             </ul>
         </div>
@@ -58,5 +57,8 @@
     </div>
 </div>
 {# TODO: JS scripts #}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+
 </body>
 </html>
