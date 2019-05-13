@@ -28,8 +28,11 @@
 
                 <li>
                     <div id="ex1" class="modal">
-                        <p>Thanks for clicking. That felt good.</p>
-                        <p>asd jsn wwhdbnn aosdwwe</p>
+                        {% if about %}
+                        <p>{{ about.about_me }}</p>
+                        {% else %}
+                        <p>Nothing to display</p>
+                        {% endif %}
                     </div>
                     <a href="#ex1" rel="modal:open">about me</a>
                 </li>

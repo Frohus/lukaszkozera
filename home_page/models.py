@@ -10,6 +10,9 @@ class About(models.Model):
         verbose_name = "About Info"
         verbose_name_plural = "About Info"
 
+    def __str__(self):
+        return "About"
+
 
 class Cv(models.Model):
     # TODO: create path for cv file
@@ -18,6 +21,9 @@ class Cv(models.Model):
     class Meta:
         verbose_name = "CV"
         verbose_name_plural = "CV"
+
+    def __str__(self):
+        return "CV"
 
 
 class Contact(models.Model):
