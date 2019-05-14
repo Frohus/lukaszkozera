@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="{% static 'home_page/home_static.css' %}">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
           integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.0/animate.min.css">
 </head>
 <body>
 
@@ -21,31 +21,31 @@
 
             <ul>
 
-
-                <!--Start of Modal -->
-                <!--End of Modal -->
-
-
                 <li>
-                    <div id="ex1" class="modal">
-                        {% if about %}
-                        <p>{{ about.about_me }}</p>
-                        {% else %}
-                        <p>Nothing to display</p>
-                        {% endif %}
+                <!--Start of Modal -->
+                <!--Call your modal-->
+                <a id="modal" href="#animatedModal">about me</a>
+
+                <!--DEMO01-->
+                <div id="animatedModal">
+                    <!--THIS IS IMPORTANT! to close the modal, the class name has to match the name given on the ID  class="close-animatedModal" -->
+                    <div class="close-animatedModal">
+                        X
                     </div>
-                    <a href="#ex1" rel="modal:open">about me</a>
+
+                    <div class="modal-content">
+                        <p>Content</p>
+                        <h1>Modal content</h1>
+                    </div>
+                </div>
+                <!--End of Modal -->
                 </li>
+
+                <li><a>about me</a></li>
                 {# TODO: pop up with text about me#}
                 <li><a>projects</a></li>
                 {# TODO: lift all page once clicked showing available projects #}
-                <li>
-                    <div id="ex1" class="modal">
-                        <p>Thanks for clicking. That felt good.</p>
-                        <p>asd jsn wwhdbnn aosdwwe</p>
-                    </div>
-                    <a href="#ex1" rel="modal:open">cv</a>
-                </li>
+                <li><a>cv</a></li>
                 {# TODO: pop up pdf Cv, with option to download and/or print #}
             </ul>
         </div>
@@ -60,8 +60,10 @@
     </div>
 </div>
 {# TODO: JS scripts #}
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
-
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src= {% static  'js/animatedModal.min.js' %}></script>
+<script>
+    $("#modal").animatedModal();
+</script>
 </body>
 </html>
