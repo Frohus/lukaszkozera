@@ -6,7 +6,9 @@ from .models import About, Cv
 
 
 def home(request):
-    context = {
-        'about': About.objects.all()
-    }
-    return render(request, 'home_page/home.html', context)
+    return render(request, 'home_page/home.html')
+
+
+def about_view(request):
+    about_text = About.objects.first()
+    return render(request, '#', {'about_text': about_text})
