@@ -10,5 +10,14 @@ def home(request):
 
 
 def about_view(request):
-    about_text = About.objects.first()
-    return render(request, '#', {'about_text': about_text})
+    context = {
+        'about_texts': About.objects.all()
+    }
+    return render(request, 'home_page/modal.html', context)
+
+
+def cv_view(request):
+    context = {
+        'cv_display': Cv.objects.all()
+    }
+    return render(request, 'home_page/cv.html', context)

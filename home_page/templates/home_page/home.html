@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="{% static 'home_page/home_static.css' %}">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
           integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
 </head>
 <body>
 
@@ -22,7 +23,13 @@
 
                 <li>
                 <!--Start of Modal -->
-{#                TODO: jquery modal https://jquerymodal.com/?#}
+                    <div id="ex1" class="modal">
+                        <p>Thanks for clicking. That felt good.</p>
+                        <a href="#" rel="modal:close">Close</a>
+                    </div>
+
+                    <!-- Link to open the modal -->
+                    <p><a href="{% url 'about-view' %}" rel="modal:open">Open Modal</a></p>
                 <!--End of Modal -->
                 </li>
 
@@ -45,6 +52,7 @@
     </div>
 </div>
 {# TODO: JS scripts #}
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
 </body>
 </html>
