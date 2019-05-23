@@ -1,5 +1,6 @@
-from django.shortcuts import render
+from django.shortcuts import render, HttpResponse
 from .models import About, Cv
+from django.http import FileResponse, Http404
 
 
 # Create your views here.
@@ -18,6 +19,6 @@ def about_view(request):
 
 def cv_view(request):
     context = {
-        'cv_display': Cv.objects.all()
+        'cv_views': Cv.objects.all()
     }
     return render(request, 'home_page/cv.html', context)

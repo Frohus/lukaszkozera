@@ -17,27 +17,36 @@
 
         <div class="topbar">
             <span><a href="#">Lukasz Kozera</a></span> <br>
-            <p>Student • Programmer • Developer</p>
+            <p>Student • Tester • Developer</p>
 
             <ul>
 
                 <li>
                 <!--Start of Modal -->
-                    <div id="ex1" class="modal">
+                    <div id="about_modal" class="modal">
                         <p>Thanks for clicking. That felt good.</p>
                         <a href="#" rel="modal:close">Close</a>
                     </div>
 
                     <!-- Link to open the modal -->
-                    <p><a href="{% url 'about-view' %}" rel="modal:open">Open Modal</a></p>
+                    <a href="{% url 'about-view' %}" rel="modal:open">about me</a>
                 <!--End of Modal -->
                 </li>
-
-                <li><a>about me</a></li>
-                {# TODO: pop up with text about me #}
                 <li><a>projects</a></li>
                 {# TODO: lift all page once clicked showing available projects #}
-                <li><a>cv</a></li>
+
+                <li>
+                    <!--Start of Modal -->
+                    <div id="cv_modal" class="modal">
+                        <p>Thanks for clicking. That felt good.</p>
+                        <a href="#" rel="modal:close">Close</a>
+                    </div>
+
+                    <!-- Link to open the modal -->
+                    <a href="{% url 'cv-view' %}" rel="modal:open">cv</a>
+                    <!--End of Modal -->
+                </li>
+
                 {# TODO: pop up pdf Cv, with option to download and/or print #}
             </ul>
         </div>
