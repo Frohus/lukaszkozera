@@ -19,7 +19,6 @@ class Cv(models.Model):
     cv = models.FileField(upload_to="home_page/static/home_page/", validators=[validate_file_extension])
 
     class Meta:
-        verbose_name = "CV"
         verbose_name_plural = "CV"
 
     def __str__(self):
@@ -33,7 +32,6 @@ class Contact(models.Model):
     date_send = models.DateTimeField(auto_now_add=True)
 
     class Meta:
-        verbose_name = "Messages"
         verbose_name_plural = "Messages"
 
 
