@@ -1,4 +1,9 @@
-<object data="{% url 'home_page/static/home_page/examplepdf.pdf' %}" type="application/pdf" width="100%" height="100%">
-  <p>Alternative text</p>
-</object>
+<div>
+
+    <h1>Some info about me</h1>
+    {% for cv in cv_views %}
+        {{ cv.cv }}
+    {% endfor %}
+
+</div>
 

@@ -22,3 +22,9 @@ def cv_view(request):
         'cv_views': Cv.objects.all()
     }
     return render(request, 'home_page/cv.html', context)
+
+# def cv_view(request):
+#     with open("home_page/static/home_page/examplepdf.pdf", "r") as pdf:
+#         response = HttpResponse(pdf.read(), mimetype="application/pdf")
+#         response["Content-Disposition"] = "inline;filename=home_page/static/home_page/examplepdf.pdf"
+#         return response
