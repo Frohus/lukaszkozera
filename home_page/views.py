@@ -14,7 +14,7 @@ def about_view(request):
     context = {
         'about_texts': About.objects.all()
     }
-    return render(request, 'home_page/modal.html', context)
+    return render(request, 'home_page/about.html', context)
 
 
 def cv_view(request):

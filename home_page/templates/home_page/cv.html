@@ -1,9 +1,7 @@
 <div>
 
-    <h1>Some info about me</h1>
-    {% for cv in cv_views %}
-        {{ cv.cv }}
-    {% endfor %}
-
+{% for doc in cv_views %}
+<iframe src="{{ doc.cv.url }}" height="600px" width="400px">
+{% endfor %}
 </div>
 
