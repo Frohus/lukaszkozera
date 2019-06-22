@@ -1,7 +1,8 @@
-<div>
+<div style="height: 700px; width: 500px;">
 
 {% for doc in cv_views %}
-<iframe src="{{ doc.cv.url }}" height="800px" width="450px">
+    <iframe src="{{ doc.cv.url }}#view=fit" style="width:90%;height:100%;border-width: 0;">
 {% endfor %}
+    </iframe>
 </div>
 

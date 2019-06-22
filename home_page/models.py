@@ -14,7 +14,6 @@ class About(models.Model):
 
 
 class Cv(models.Model):
-    # TODO: create path for cv file
     cv = models.FileField(upload_to="media", validators=[validate_file_extension])
 
     class Meta:
