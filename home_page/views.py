@@ -41,6 +41,5 @@ def email(request):
     return render(request, "home_page/contact_form.html", {"form": form})
 
 
-# def success(request):
-#     messages.success(request, "done")
-#     return HttpResponse('Thank for your message!')
+def projects(request):
+    return render(request, 'home_page/projects.html')

@@ -9,6 +9,11 @@ html, body {
     overflow-x: hidden;
     overflow-y: hidden;
     margin: 0;
+    background: url(background.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 a {
@@ -74,11 +79,11 @@ li {
     transform-style: preserve-3d;
     height: 100%;
     width: 100%;
-    background: url(background.jpg) no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+    /*background: url(background.jpg) no-repeat center center fixed;*/
+    /*-webkit-background-size: cover;*/
+    /*-moz-background-size: cover;*/
+    /*-o-background-size: cover;*/
+    /*background-size: cover;*/
 }
 
 .shim {
@@ -133,4 +138,8 @@ li {
     color: #FFFFFFCC;
 }
 
-/*              CV Modal                  */
+.centered p {
+  position: absolute; /* or absolute */
+  top: 50%;
+  left: 50%;
+}
