@@ -36,8 +36,10 @@ def email(request):
             send_mail(subject, message, mail, ["example@gmail.com"], fail_silently=False)
             messages.success(request, "Done")
             return redirect("homepage")
+        else:
+            print(ContactForm.errors)
     else:
-        form = ContactForm
+        form = ContactForm()
     return render(request, "home_page/contact_form.html", {"form": form})
 
 

@@ -1,9 +1,9 @@
 {% load crispy_forms_tags %}
 <h1>Leave me a message</h1>
-<form method="post" action="{% url 'homepage' %}">
+<form method="post" action="{% url 'contact' %}">
     {% csrf_token %}
     {{ form|crispy }}
-    <div class="form-actions">
-      <button type="submit">Send</button>
+    <div>
+      <button>Send</button>
     </div>
 </form>
