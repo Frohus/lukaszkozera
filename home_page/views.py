@@ -1,9 +1,11 @@
 from django.shortcuts import render, redirect
 from django.core.mail import send_mail
 from django.contrib import messages
+from django.core.exceptions import ValidationError
 
 from .models import About, Cv
 from .forms import ContactForm
+from lukaszkozera.secrets import INBOX_EMAIL
 
 # Create your views here.
 
@@ -33,11 +35,12 @@ def email(request):
             mail = form.cleaned_data["from_email"]
             subject = form.cleaned_data["subject"]
             message = form.cleaned_data["message"]
-            send_mail(subject, message, mail, ["example@gmail.com"], fail_silently=False)
-            messages.success(request, "Done")
+            send_mail(subject, message, mail, [INBOX_EMAIL], fail_silently=False)
+            messages.success(request, "Thanks for your message")
             return redirect("homepage")
         else:
-            print(ContactForm.errors)
+            messages.error(request, "Some error occurred while send the message.")
+    #         TODO: Display success and error message
     else:
         form = ContactForm()
     return render(request, "home_page/contact_form.html", {"form": form})
