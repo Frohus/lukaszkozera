@@ -34,7 +34,8 @@ def email(request):
         if form.is_valid():
             mail = form.cleaned_data["from_email"]
             subject = form.cleaned_data["subject"]
-            message = form.cleaned_data["message"]
+            message = form.cleaned_data["message"] + \
+                      f"\nSend from: {mail}"
             send_mail(subject, message, mail, [INBOX_EMAIL], fail_silently=False)
             messages.success(request, "Thanks for your message")
             return redirect("homepage")
