@@ -3,7 +3,7 @@ from django.core.mail import send_mail
 from django.contrib import messages
 from django.core.exceptions import ValidationError
 
-from .models import About, Cv
+from .models import About, Cv, Project
 from .forms import ContactForm
 from lukaszkozera.secrets import INBOX_EMAIL
 
@@ -47,5 +47,14 @@ def email(request):
     return render(request, "home_page/contact_form.html", {"form": form})
 
 
+displayprojects = [
+    {
+        "project_title": "Image Share",
+        "project_desc": "loreum ipsum",
+        "project_url": "127.0.0.1"
+    }
+]
+
 def projects(request):
-    return render(request, 'home_page/projects.html')
+    context = {"displayprojects": displayprojects}
+    return render(request, 'home_page/projects.html', context)

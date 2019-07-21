@@ -1,4 +1,11 @@
 {% extends "home_page/base.html" %}
 {% block content %}
-    <div class="projectpage">SITE UNDER CONSTRUCTION</div>
+{#    <div class="projectpage">SITE UNDER CONSTRUCTION</div>#}
+    {% for project in displayprojects %}
+        <div style="color: white; font-size: 20px">
+        <h2>{{ project.project_title }}</h2>
+        <p>{{ project.project_desc }}</p>
+        <p>{{ project.project_url }}</p>
+        </div>
+    {% endfor %}
 {% endblock content %}
