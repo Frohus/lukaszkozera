@@ -51,8 +51,33 @@ displayprojects = [
     {
         "project_title": "Image Share",
         "project_desc": "loreum ipsum",
-        "project_url": "127.0.0.1"
-    }
+        "project_url": "google.com"
+    },
+    {
+        "project_title": "Job Search",
+        "project_desc": "loreum ipsum",
+        "project_url": "google.com"
+    },
+    {
+        "project_title": "Reference creator",
+        "project_desc": "loreum ipsum",
+        "project_url": "google.com"
+    },
+    {
+        "project_title": "Random project",
+        "project_desc": "loreum ipsum",
+        "project_url": "google.com"
+    },
+    {
+        "project_title": "Uga Buga",
+        "project_desc": "loreum ipsum",
+        "project_url": "google.com"
+    },
+    {
+        "project_title": "Kopsnij drina",
+        "project_desc": "loreum ipsum",
+        "project_url": "google.com"
+    },
 ]
 
 def projects(request):

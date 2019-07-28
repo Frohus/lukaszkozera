@@ -1,11 +1,25 @@
 {% extends "home_page/base.html" %}
 {% block content %}
 {#    <div class="projectpage">SITE UNDER CONSTRUCTION</div>#}
-    {% for project in displayprojects %}
-        <div style="color: white; font-size: 20px">
-        <h2>{{ project.project_title }}</h2>
-        <p>{{ project.project_desc }}</p>
-        <p>{{ project.project_url }}</p>
+
+    <div class="title">
+        <p>My Projects</p>
+    </div>
+    <div class="projects-container">
+        {% for project in displayprojects %}
+        <div class="project-box">
+            <div class="project-title">
+                <p>{{ project.project_title }}</p>
+            </div>
+            <div class="project-desc">
+                <p>{{ project.project_desc }}</p>
+            </div>
+            <div class="project-url">
+                <p><a href="{{ project.project_url }}"></a>Click to check!</p>
+            </div>
         </div>
-    {% endfor %}
+        {% endfor %}
+    </div>
+
 {% endblock content %}
+

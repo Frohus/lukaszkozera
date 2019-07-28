@@ -1,13 +1,13 @@
 html, body {
     height: 100%;
-    font-family: "Source Sans Pro", "Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,Verdana,sans-serif;
+    font-family: "Fira Sans", "Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,Verdana,sans-serif;
     font-weight: normal;
     -webkit-font-smoothing: antialiased;
     font-size: 14px;
     line-height: 1.4;
     color: #000000CC;
     overflow-x: hidden;
-    overflow-y: hidden;
+    /*overflow-y: hidden;*/
     margin: 0;
     background: url(background.jpg) no-repeat center center fixed;
     -webkit-background-size: cover;
@@ -127,13 +127,86 @@ li {
     color: #FFFFFFCC;
 }
 
+/* Projects page  under construction*/
 
-.projectpage {
+/*.projectpage {*/
+/*    color: white;*/
+/*    font-size: 50px;*/
+/*    position: fixed;*/
+/*    top: 50%;*/
+/*    left: 50%;*/
+/*  !* bring your own prefixes *!*/
+/*    transform: translate(-50%, -50%);*/
+/*}*/
+
+/* Projects page */
+
+.title {
+    display: flex;
+    justify-content: center;
     color: white;
-    font-size: 50px;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-  /* bring your own prefixes */
-    transform: translate(-50%, -50%);
+    font-size: 40px;
+    font-weight: bold;
+    padding: 10px
+}
+
+.projects-container {
+    display: flex;
+    margin: 20px;
+    padding: 10px;
+    border-style: solid;
+    border-color: white;
+    color: white;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.project-box {
+    display: flex;
+    flex-direction: column;
+    border-style: solid;
+    border-color: yellow;
+    height: 400px;
+    width: 300px;
+    margin: 10px;
+}
+
+/*.project-box p {*/
+/*    display: flex;*/
+/*    justify-content: center;*/
+/*    color: white;*/
+/*    font-weight: bold;*/
+/*    border: solid;*/
+/*}*/
+
+.project-box:hover {
+    transition: all 500ms ease;
+    -webkit-transform: scale(1.15);
+    -ms-transform: scale(1.15);
+    transform: scale(1.15);
+}
+
+.project-title {
+    font-size: 24px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    border-style: solid;
+    border-color: white;
+}
+
+.project-desc {
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    border-style: solid;
+    border-color: white;
+}
+
+.project-url {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    border-style: solid;
+    border-color: white;
 }
