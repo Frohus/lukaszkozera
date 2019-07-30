@@ -13,13 +13,13 @@
             </div>
             <div class="project-desc">
                 <p>{{ project.project_desc }}</p>
-            </div>
-            <div class="project-url">
-                <p><a href="{{ project.project_url }}"></a>Click to check!</p>
+                <a class="url-button" href="{{ project.project_url }}">Click to check!</a>
             </div>
         </div>
         {% endfor %}
     </div>
 
 {% endblock content %}
+
+
 
