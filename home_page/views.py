@@ -35,7 +35,7 @@ def email(request):
             mail = form.cleaned_data["from_email"]
             subject = form.cleaned_data["subject"]
             message = form.cleaned_data["message"] + \
-                      f"\nSend from: {mail}"
+                      f"\nSent from: {mail}"
             send_mail(subject, message, mail, [INBOX_EMAIL], fail_silently=False)
             messages.success(request, "Thanks for your message")
             return redirect("homepage")
@@ -79,6 +79,7 @@ displayprojects = [
         "project_url": "google.com"
     },
 ]
+
 
 def projects(request):
     context = {"displayprojects": displayprojects}
