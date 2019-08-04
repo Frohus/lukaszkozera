@@ -32,8 +32,9 @@ def email(request):
     if request.method == "POST":
         form = ContactForm(request.POST)
         if form.is_valid():
-            mail = form.cleaned_data["from_email"]
-            subject = form.cleaned_data["subject"]
+            mail = form.cleaned_data["your_email"]
+            # subject = form.cleaned_data["subject"]
+            subject = "New message from website"
             message = form.cleaned_data["message"] + \
                       f"\nSent from: {mail}"
             send_mail(subject, message, mail, [INBOX_EMAIL], fail_silently=False)
