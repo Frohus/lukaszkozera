@@ -43,6 +43,7 @@ def email(request):
         else:
             messages.error(request, "Some error occurred while send the message.")
     #         TODO: Display success and error message
+    # TODO: verify form on the go. Do not allow to redirect to contact form url
     else:
         form = ContactForm()
     return render(request, "home_page/contact_form.html", {"form": form})
