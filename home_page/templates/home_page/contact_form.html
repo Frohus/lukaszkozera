@@ -3,7 +3,7 @@
 <p>If you wish to share your thoughts about my website or contact me regarding any other subject,
     please leave me a message.</p>
 <p>If you wish to send me anonymous message, please feel free to do so. Email is not required.</p>
-<form method="post" action="{% url 'contact' %}">
+<form method="post" action="{% url 'contact' %}" id="email-form">
     {% csrf_token %}
     {{ form|crispy }}
     <div>

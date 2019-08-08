@@ -27,13 +27,14 @@ def cv_view(request):
     }
     return render(request, 'home_page/cv.html', context)
 
+# TODO: add views counter
+
 
 def email(request):
     if request.method == "POST":
         form = ContactForm(request.POST)
         if form.is_valid():
             mail = form.cleaned_data["your_email"]
-            # subject = form.cleaned_data["subject"]
             subject = "New message from website"
             message = form.cleaned_data["message"] + \
                       f"\nSent from: {mail}"
@@ -41,9 +42,8 @@ def email(request):
             messages.success(request, "Thanks for your message")
             return redirect("homepage")
         else:
-            messages.error(request, "Some error occurred while send the message.")
-    #         TODO: Display success and error message
-    # TODO: verify form on the go. Do not allow to redirect to contact form url
+            messages.error(request, "Some error occurred while sending the message. Please try again.")
+            return redirect("homepage")
     else:
         form = ContactForm()
     return render(request, "home_page/contact_form.html", {"form": form})

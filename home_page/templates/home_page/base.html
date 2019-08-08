@@ -3,6 +3,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Lukasz Kozera</title>
     <link rel="stylesheet"  type="text/css" href="{% static 'home_page/home_static.css' %}">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
@@ -11,7 +12,13 @@
     <link rel="shortcut icon" type="image/png" href="{% static "home_page/favicon.png" %}"/>
 </head>
 <body>
-
+{% if messages %}
+    <ul class="messages" id="messages">
+        {% for message in messages %}
+            <li class="{{ message.tags }}">{{ message }}</li>
+        {% endfor %}
+    </ul>
+{% endif %}
 
 {% block content %}{% endblock %}
 <!-- JavaScript -->

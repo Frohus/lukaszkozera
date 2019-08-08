@@ -1,6 +1,6 @@
 html, body {
     height: 100%;
-    font-family: "Fira Sans", "Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,Verdana,sans-serif;
+    font-family: "Fira Sans", "Lucida Grande", "Lucida Sans Unicode","Lucida Sans",Geneva,Verdana,sans-serif;
     font-weight: normal;
     -webkit-font-smoothing: antialiased;
     font-size: 14px;
@@ -230,3 +230,50 @@ li {
     padding: 10px 19px;
     font-weight: 600;
 }
+
+.success, .error {
+    position: absolute;
+    font-size: 20px;
+    width: 400px;
+    left: 0;
+    right: 0;
+    margin: 200px auto;
+    border: 1px solid;
+    border-radius: .5em;
+    text-align: center;
+    -moz-animation: cssAnimation 0s ease-in 3s forwards;
+    /* Firefox */
+    -webkit-animation: cssAnimation 0s ease-in 3s forwards;
+    /* Safari and Chrome */
+    -o-animation: cssAnimation 0s ease-in 3s forwards;
+    /* Opera */
+    animation: cssAnimation 0s ease-in 3s forwards;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+
+.success {
+    color: #4F8A10;
+    background-color: #DFF2BF;
+}
+
+.error {
+    color: #D8000C;
+    background-color: #FFD2D2;
+}
+
+@keyframes cssAnimation {
+    to {
+        width:0;
+        height:0;
+        overflow:hidden;
+    }
+}
+@-webkit-keyframes cssAnimation {
+    to {
+        width:0;
+        height:0;
+        visibility:hidden;
+    }
+}
+

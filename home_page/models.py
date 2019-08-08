@@ -23,21 +23,21 @@ class Cv(models.Model):
         return "CV"
 
 
-class Contact(models.Model):
-    name = models.CharField(max_length=50, blank=True)
-    email = models.EmailField(blank=True)
-    message = models.TextField()
-    date_send = models.DateTimeField(auto_now_add=True)
-
-    class Meta:
-        verbose_name_plural = "Messages"
-
-
 class Project(models.Model):
     project_title = models.CharField(max_length=50)
     project_desc = models.TextField()
     project_date_added = models.DateTimeField(auto_now_add=True)
-    project_url = models.URLField()
+    project_url = models.TextField(max_length=200)
 
     def __str__(self):
         return self.project_title
+
+
+class Technology(models.Model):
+    technology_name = models.CharField(max_length=30)
+    project = models.ForeignKey(Project, on_delete=models.CASCADE)
+    technology_used = models.BooleanField(default=False)
+    technology_icon = models.TextField(max_length=100)
+
+    class Meta:
+        verbose_name_plural = "Technologies"
