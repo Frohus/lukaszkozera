@@ -159,15 +159,7 @@ li {
 
 /* Projects page */
 
-.title {
-    display: flex;
-    justify-content: center;
-    color: white;
-    font-size: 40px;
-    font-weight: bold;
-    margin: 20px;
-    /*border: solid white;*/
-}
+
 
 .projects-container {
     display: flex;
@@ -212,7 +204,7 @@ li {
 }
 
 .project-desc {
-    padding: 20px 30px;
+    padding: 5px 5px;
     display: flex;
     justify-content: space-between;
     flex-direction: column;
@@ -277,3 +269,25 @@ li {
     }
 }
 
+.projects-navbar {
+    display: flex;
+    color: white;
+}
+
+.back-home {
+    color: white;
+    font-size: 40px;
+    margin-top: 15px;
+    justify-content: flex-start;
+    margin-left: 20px;
+    width: 100px;
+}
+
+.title {
+    font-size: 40px;
+    font-weight: bold;
+    margin: auto;
+    position: relative;
+    left: -50px;
+    /*border: solid white;*/
+}

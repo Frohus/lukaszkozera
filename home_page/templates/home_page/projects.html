@@ -4,11 +4,12 @@
 
 
 
-    <div class="titleeee">
+    <div class="projects-navbar">
+        <p><a class ="back-home" href="{% url 'homepage' %}"><i class="fas fa-arrow-left"></i></a></p>
         <p class="title">My Projects</p>
     </div>
     <div class="projects-container">
-        {% for project in displayprojects %}
+        {% for project in projects %}
         <div class="project-box">
             <div class="project-title">
                 <p>{{ project.project_title }}</p>
@@ -20,7 +21,9 @@
         </div>
         {% endfor %}
     </div>
-
+{#<div class="back-home">#}
+{#    <button><a href="{% url 'homepage' %}">Back</a></button>#}
+{#</div>#}
 
 
 {% endblock content %}

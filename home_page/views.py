@@ -84,5 +84,5 @@ displayprojects = [
 
 
 def projects(request):
-    context = {"displayprojects": displayprojects}
+    context = {"projects": Project.objects.all()}
     return render(request, 'home_page/projects.html', context)
